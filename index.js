@@ -34,7 +34,7 @@ window.addEventListener("load", function () {
         addSnowDivs(50);
 
         // add music
-        bgMusic.volume = 0.0;
+        bgMusic.volume = 0.04;
         bgMusic.loop = true;
         bgMusic.play();
     }
