@@ -11,8 +11,8 @@ window.addEventListener("load", function () {
     const startBtn = this.document.getElementById("startBtn");
 
     //const bgMusic = new Audio("./media/jb_rock.mp3");
-    const bgMusic = new Audio("https://github.com/stiantalgo/project/blob/main/media/jb_rock.mp3");
-
+    //const bgMusic = new Audio("https://github.com/stiantalgo/project/blob/main/media/jb_rock.mp3");
+    const bgMusic = new Audio("https://https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/jb_rock.mp3");
     
   
 
