@@ -46,7 +46,7 @@ window.addEventListener("load", function () {
         
     }
     startHidden();
-    allowedDays(24);
+    allowedDays(24); // set day here
     function allowedDays(num){
         for(let i = 1; i <= num; i++){
             showDoor(i);
