@@ -35,10 +35,10 @@ body {
   margin: auto;
   width: 50%;  
   
-  width: 797px;
-  height: 585px;
-  background-image: url(./img/BG.png);
-  background-repeat: no-repeat;
+  width: 1536px;
+  height: 1086px;
+  background-image: url(./img/julkalender.png);
+  background-size:cover;
 }
 
 button:hover{

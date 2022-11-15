@@ -1,9 +1,13 @@
 window.addEventListener("load", function () {
 
+    // const someSnow = this.document.getElementById("someSnow");
+    // const allSnow = this.document.getElementById("allSnow");
+    // const noSnow = this.document.getElementById("noSnow");
+    // someSnow.addEventListener("click", () => { addSnowDivs(30) });
+    // allSnow.addEventListener("click", () => { addSnowDivs(300) });
+    // noSnow.addEventListener("click", removeSnow);
 
-    const someSnow = this.document.getElementById("someSnow");
-    const allSnow = this.document.getElementById("allSnow");
-    const noSnow = this.document.getElementById("noSnow");
+
     const displayBig = this.document.getElementById("displayBig");
     const backdiv1 = this.document.getElementById("back1");
 
@@ -14,12 +18,11 @@ window.addEventListener("load", function () {
     const bgMusic = new Audio("https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/jb_rock.mp3?raw=true");
 
   
+    
 
 
-    someSnow.addEventListener("click", () => { addSnowDivs(30) });
-    allSnow.addEventListener("click", () => { addSnowDivs(300) });
-    noSnow.addEventListener("click", removeSnow);
     startBtn.addEventListener("click", openCalendar);
+
     displayBig.addEventListener("click", () =>{
         displayBig.style.display = "none";
     });
@@ -38,7 +41,26 @@ window.addEventListener("load", function () {
         bgMusic.volume = 0.04;
         bgMusic.loop = true;
         bgMusic.play();
+        
     }
+    startHidden();
+    allowedDays(3);
+    function allowedDays(num){
+        for(let i = 1; i <= num; i++){
+            showDoor(i);
+        }
+    }
+    
+    function startHidden(){
+        for(let i = 1; i <= 24; i++){
+            document.getElementById(`day${i}`).style.visibility = "hidden";
+        }
+    }
+
+    function showDoor(num){
+        document.getElementById(`day${num}`).style.visibility = "visible";
+    }
+
 
     function showItem() {    
         displayBig.style.display = "block";
@@ -79,6 +101,7 @@ window.addEventListener("load", function () {
     // });
 
     // let totalHatches = 24;
+
     // function addHatches(){
     //     for(let i = 1; i <= totalHatches; i++){
 
@@ -99,15 +122,17 @@ window.addEventListener("load", function () {
 
     //         const myDoorFront = document.createElement("div");
     //         myDoorFront.className = "front";
-    //         myDoorFront.className = `front{i}`;
+    //         myDoorFront.className = `front${i}`;
 
     //         myDoor.appendChild(myDoorFront);
 
     //         const myDoorBack = document.createElement("div");
     //         myDoorBack.className = "back";
-    //         myDoorBack.className = `back{i}`;
+    //         myDoorBack.className = `back${i}`;
     //         myDoor.appendChild(myDoorBack);    
     //     }
     // }
+
+    
 
 })

@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"name": "stiantalgo.github.io",
+			"path": "."
+		},
+		{
+			"name": "media",
+			"path": "../Advent_Calendar/media"
+		},
+		{
+			"name": "img",
+			"path": "../Advent_Calendar/img"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "stiantalgo.github.io",
+		"liveServer.settings.port": 5501
+	}
+}
