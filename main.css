@@ -193,12 +193,6 @@ label:hover .door {
 
 
 
-
-
-.front{
-  background-color: #6901016b;
-}
-
 /* Door placement */
 
 #day1{
@@ -249,7 +243,23 @@ label:hover .door {
   left: 170px;
 }
 
+#day9{
+  position: relative;
+  top: -445px;
+  left: 1240px;
+}
 
+#day10{
+  position: relative;
+  top: -830px;
+  left: 1080px;
+}
+
+#day11{
+  position: relative;
+  top: -1065px;
+  left: 780px;
+}
 
 #day12{
   position: relative;
@@ -257,8 +267,77 @@ label:hover .door {
   left: 390px;
 }
 
+#day13{
+  position: relative;
+  top: -740px;
+  left: 999px;
+}
 
+#day14{
+  position: relative;
+  top: -1275px;
+  left: 230px;
+}
 
+#day15{
+  position: relative;
+  top: -1060px;
+  left: 710px;
+}
+
+#day16{
+  position: relative;
+  top: -1130px;
+  left: 1401px;
+}
+
+#day17{
+  position: relative;
+  top: -1880px;
+  left: 420px;
+}
+
+#day18{
+  position: relative;
+  top: -1740px;
+  left: 470px;
+}
+
+#day19{
+  position: relative;
+  top: -1560px;
+  left: 380px;
+}
+
+#day20{
+  position: relative;
+  top: -2130px;
+  left: 565px;
+}
+
+#day21{
+  position: relative;
+  top: -2010px;
+  left: 1115px;
+}
+
+#day22{
+  position: relative;
+  top: -2228px;
+  left: 1337px;
+}
+
+#day23{
+  position: relative;
+  top: -1790px;
+  left: 840px;
+}
+
+#day24{
+  position: relative;
+  top: -2282px;
+  left: 830px;
+}
 
 
 
