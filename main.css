@@ -35,9 +35,13 @@ body {
   margin: auto;
   width: 50%;  
   
-  width: 1536px;
+  /* width: 1536px;
   height: 1086px;
-  background-image: url(./img/julkalender.png);
+  background-image: url(./img/julkalender.png); */
+
+  width: 1600px;
+  height: 1016px;
+  background-image: url(./img/julkalender2.png);
   background-size:cover;
 }
 
@@ -102,9 +106,7 @@ button:hover{
 
 /* Doors */
 
-.front{
-  background-color: #090a0f46;
-}
+
 
 
 .allHatches{
@@ -115,7 +117,6 @@ button:hover{
 
 .allHatches input {
   display: none;
-  background-color: #090a0f;
 }
  
 label {
@@ -164,12 +165,19 @@ label:hover .door {
   transform: rotateY(180deg);
 }
  
-:checked + .door {
-  /* transform: rotateY(180deg); */
+/* :checked + .door {
+  transform: rotateY(180deg); 
 
+} */
 
+@media only screen and (max-width: 1023px){
+  /* insert lower resolution */
 }
 
+
+
+
+/* Door goodies / art*/
 
 .day-1 .back {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/child.svg);
@@ -187,20 +195,66 @@ label:hover .door {
 
 
 
-
+.front{
+  background-color: #6901016b;
+}
 
 /* Door placement */
 
 #day1{
   position: relative;
-  top: 220px;
-  left: 255px;
+  top: 230px;
+  left: 340px;
 }
 
 #day2{
   position: relative;
-  top: 330px;
-  left: 580px;
+  top: 310px;
+  left: 630px;
+}
+
+#day3{
+  position: relative;
+  top: 600px;
+  left: 1310px;
+}
+
+#day4{
+  position: relative;
+  top: 345px;
+  left: 530px;
+}
+
+#day5{
+  position: relative;
+  top: -200px;
+  left: 875px;
+}
+
+#day6{
+  position: relative;
+  top: 290px;
+  left: 685px;
+}
+
+#day7{
+  position: relative;
+  top: -285px;
+  left: 255px;
+}
+
+#day8{
+  position: relative;
+  top: -115px;
+  left: 170px;
+}
+
+
+
+#day12{
+  position: relative;
+  top: -399px;
+  left: 390px;
 }
 
 
