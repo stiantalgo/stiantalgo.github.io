@@ -2,9 +2,14 @@ body {
   height: 100vh;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow: hidden;
+  overflow-y: auto;
   filter: drop-shadow(0 0 10px white);
   text-align: center;
   color: rgb(0, 0, 0);
+
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   
 
 
@@ -12,6 +17,12 @@ body {
   
   cursor: url(img/pointer.png), auto;
 }
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+
 
 #displayBig{
 
@@ -316,97 +327,280 @@ label:hover .door {
   left: 830px;
 }
 
-
-@media only screen and (max-width: 1023px){
+@media only screen and (max-height: 1080px){
   /* insert lower resolution */
   #displayBig{
 
-    width: 700px;
-    height: 500px;
+    width: calc(1400px / 1.2);
+    height: calc(100px / 1.2);
     border: 3px solid white;
   }
   
   #container{
-    width: 800px;
-    height: 508px;
+    width: calc(1600px / 1.2);
+    height: calc(1016px / 1.2);
   }
   
   #startBtn{
     border-radius: 25px;
-    font-size: 20px;
+    font-size: calc(40px / 1.2);
   
-    top: -325px;
-    width: 150px;
-    height: 50px;  
+    top: calc(-650px / 1.2);
+    width: calc(300px / 1.2);
+    height: calc(100px / 1.2); 
   }
   
   .allHatches{
-    width: 40px;
-    height: 40px;  
+    width: calc(80px / 1.2);
+    height: calc(80px / 1.2);
   }
   
   label {
-    perspective: 500px;
-    height: 60px;
+    perspective: calc(1000px / 1.2);
+    height: calc(120px / 1.2);
   }
   
   
   .door {
-    width: 40px;
-    height: 40px;
+    width: calc(80px / 1.2);
+    height: calc(80px / 1.2);
   }
 
   /* Door placement */
 
   #day1{
     position: relative;
-    top: 115px;
-    left: 170px;
+    top: calc(230px / 1.2);
+    left: calc(340px / 1.2);
   }
   
   #day2{
     position: relative;
-    top: 155px;
-    left: 315px;
+    top: calc(310px / 1.2);
+    left: calc(630px / 1.2);
   }
   
   #day3{
     position: relative;
-    top: 300px;
-    left: 655px;
+    top: calc(600px / 1.2);
+    left: calc(1310px / 1.2);
   }
   
   #day4{
     position: relative;
-    top: 172px;
-    left: 265px;
+    top: calc(345px / 1.2);
+    left: calc(530px / 1.2);
   }
-
-  /* fix resten*/
-
   
   #day5{
     position: relative;
-    top: -100px;
-    left: 437px;
+    top: calc(-200px / 1.2);
+    left: calc(874px / 1.2);
   }
   
   #day6{
     position: relative;
-    top: 145px;
-    left: 342px;
+    top: calc(290px / 1.2);
+    left: calc(685px / 1.2);
   }
   
   #day7{
     position: relative;
-    top: -142px;
-    left: 127px;
+    top: calc(-285px / 1.2);
+    left: calc(255px / 1.2);
   }
   
   #day8{
     position: relative;
-    top: -57px;
-    left: 85px;
+    top: calc(-115px / 1.2);
+    left: calc(170px / 1.2);
+  }
+  
+  #day9{
+    position: relative;
+    top: calc(-445px / 1.2);
+    left: calc(1240px / 1.2);
+  }
+  
+  #day10{
+    position: relative;
+    top: calc(-830px / 1.2);
+    left: calc(1080px / 1.2);
+  }
+  
+  #day11{
+    position: relative;
+    top: calc(-1065px / 1.2);
+    left: calc(780px / 1.2);
+  }
+  
+  #day12{
+    position: relative;
+    top: calc(-399px / 1.2);
+    left: calc(390px / 1.2);
+  }
+  
+  #day13{
+    position: relative;
+    top: calc(-740px / 1.2);
+    left: calc(999px / 1.2);
+  }
+  
+  #day14{
+    position: relative;
+    top: calc(-1275px / 1.2);
+    left: calc(230px / 1.2);
+  }
+  
+  #day15{
+    position: relative;
+    top: calc(-1060px / 1.2);
+    left: calc(710px / 1.2);
+  }
+  
+  #day16{
+    position: relative;
+    top: calc(-1130px / 1.2);
+    left: calc(1401px / 1.2);
+  }
+  
+  #day17{
+    position: relative;
+    top: calc(-1880px / 1.2);
+    left: calc(420px / 1.2);
+  }
+  
+  #day18{
+    position: relative;
+    top: calc(-1740px / 1.2);
+    left: calc(470px / 1.2);
+  }
+  
+  #day19{
+    position: relative;
+    top: calc(-1560px / 1.2);
+    left: calc(380px / 1.2);
+  }
+  
+  #day20{
+    position: relative;
+    top: calc(-2130px / 1.2);
+    left: calc(565px / 1.2);
+  }
+  
+  #day21{
+    position: relative;
+    top: calc(-2010px / 1.2);
+    left: calc(1115px / 1.2);
+  }
+  
+  #day22{
+    position: relative;
+    top: calc(-2228px / 1.2);
+    left: calc(1337px / 1.2);
+  }
+  
+  #day23{
+    position: relative;
+    top: calc(-1790px / 1.2);
+    left: calc(840px/ 1.2);
+  }
+  
+  #day24{
+    position: relative;
+    top: calc(-2282px / 1.2);
+    left: calc(830px / 1.2);
+  }
+}
+
+
+@media only screen and (max-width: 1023px){
+  /* insert lower resolution */
+  #displayBig{
+
+    width: calc(1400px / 2);
+    height: calc(100px / 2);
+    border: 3px solid white;
+  }
+  
+  #container{
+    width: calc(1600px / 2);
+    height: calc(1016px / 2);
+  }
+  
+  #startBtn{
+    border-radius: 25px;
+    font-size: calc(40px / 2);
+  
+    top: calc(-650px / 2);
+    width: calc(300px / 2);
+    height: calc(100px / 2);  
+  }
+  
+  .allHatches{
+    width: calc(80px / 2);
+    height: calc(80px / 2);  
+  }
+  
+  label {
+    perspective: calc(1000px / 2);
+    height: calc(120px / 2);
+  }
+  
+  
+  .door {
+    width: calc(80px / 2);
+    height: calc(80px / 2);
+  }
+
+  /* Door placement */
+
+  #day1{
+    position: relative;
+    top: calc(230px / 2);
+    left: calc(340px / 2);
+  }
+  
+  #day2{
+    position: relative;
+    top: calc(310px / 2);
+    left: calc(630px / 2);
+  }
+  
+  #day3{
+    position: relative;
+    top: calc(600px / 2);
+    left: calc(1310px / 2);
+  }
+  
+  #day4{
+    position: relative;
+    top: calc(345px / 2);
+    left: calc(530px / 2);
+  }
+  
+  #day5{
+    position: relative;
+    top: calc(-200px / 2);
+    left: calc(874px / 2) ;
+  }
+  
+  #day6{
+    position: relative;
+    top: calc(290px / 2);
+    left: calc(685px / 2);
+  }
+  
+  #day7{
+    position: relative;
+    top: calc(-285px / 2);
+    left: calc(255px / 2);
+  }
+  
+  #day8{
+    position: relative;
+    top: calc(-115px / 2);
+    left: calc(170px / 2);
   }
   
   #day9{
@@ -505,7 +699,6 @@ label:hover .door {
     left: calc(830px / 2);
   }
 }
-
 
 
 
