@@ -18,6 +18,8 @@ window.addEventListener("load", function () {
     const bgMusic = new Audio("https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/jb_rock.mp3?raw=true");
 
   
+    const date = new Date;
+    let day = date.getDate();
     
 
 
@@ -38,7 +40,7 @@ window.addEventListener("load", function () {
         addSnowDivs(50);
 
         // add music
-        bgMusic.volume = 0.04;
+        bgMusic.volume = 0.02;
         bgMusic.loop = true;
         bgMusic.play();
         
