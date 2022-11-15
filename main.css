@@ -48,10 +48,11 @@ button:hover{
 
 .hatches{
   width: 70px;
-  height: 70px;
-  /* border: 2px solid; */
+  height: 70px;  
   
 }
+
+
 
 .hatches:hover{
   background-color: #090a0f91;
@@ -101,14 +102,20 @@ button:hover{
 
 /* Doors */
 
+.front{
+  background-color: #090a0f46;
+}
+
 
 .allHatches{
   width: 80px;
   height: 80px;
+  
 }
 
 .allHatches input {
   display: none;
+  background-color: #090a0f;
 }
  
 label {
@@ -182,8 +189,19 @@ label:hover .door {
 
 
 
+/* Door placement */
 
+#day1{
+  position: relative;
+  top: 220px;
+  left: 255px;
+}
 
+#day2{
+  position: relative;
+  top: 330px;
+  left: 580px;
+}
 
 
 
