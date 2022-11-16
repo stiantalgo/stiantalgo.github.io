@@ -326,7 +326,7 @@ label:hover .door {
   #displayBig{
 
     width: calc(1400px / 1.2);
-    height: calc(100px / 1.2);
+    height: calc(1000px / 1.2);
     border: 3px solid white;
   }
   
@@ -513,7 +513,7 @@ label:hover .door {
   #displayBig{
 
     width: calc(1400px / 2);
-    height: calc(100px / 2);
+    height: calc(1000px / 2);
     border: 3px solid white;
   }
   
