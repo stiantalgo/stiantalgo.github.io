@@ -149,29 +149,68 @@ label:hover .door {
 } */
 
 
+/* lights */
 
-
-
-
-/* Door goodies / art*/
-
-
-.day-1 .back {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/child.svg);
+@keyframes blink{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: .8;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 
-.day-2 .back {
-  background: url(./img/bg2-icon.png);
+#myStar{
+position: relative;
+top: -350px;
+left: 640px;
+transform: rotateZ(-34deg);
+filter: blur(5px);
+animation: blink 2.5s infinite;
 }
 
-.day-3 .back {
-  background: url(./img/julkalender.png);
-  background-size: cover;  
+#star {
+  
+  position: relative;
+  display: block;
+  color: red;
+  width: 0px;
+  height: 0px;
+  border-right: calc(130px/2)  solid transparent;
+  border-bottom: calc(70px/2)  solid #f7ef08;
+  border-left: calc(80px/2)  solid transparent;
+  transform: rotate(35deg);
 }
-
-
-
-
+#star:before {
+  border-bottom: calc(70px/2) solid #f7ef08;
+  border-left: calc(50px/2) solid transparent;
+  border-right: calc(20px/2) solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: calc(-45px/2);
+  left: calc(-65px/2);
+  display: block;
+  content: '';
+  transform: rotate(-35deg);
+}
+#star:after {
+  position: absolute;
+  display: block;
+  color: red;
+  top: calc(3px/2) ;
+  left: calc(-105px/2) ;
+  width: 0px;
+  height: 0px;
+  border-right: calc(120px/2)  solid transparent;
+  border-bottom: calc(70px/2)  solid #f7ef08;
+  border-left: calc(100px/2)  solid transparent;
+  transform: rotate(-70deg);
+  content: '';
+}
 
 
 
@@ -323,6 +362,35 @@ label:hover .door {
 
 @media only screen and (max-height: 1080px){
   /* insert lower resolution */
+
+  #myStar{
+    top: calc(-350px /1.2);
+    left: calc(640px / 1.2);
+  }
+    
+    #star {  
+      border-right: calc(calc(130px/2) /1.2)  solid transparent;
+      border-bottom: calc(calc(70px/2) /1.2)  solid #f7ef08;
+      border-left: calc(calc(80px/2) /1.2) solid transparent;    
+    }
+
+    #star:before {
+      border-bottom: calc(calc(70px/2) /1.2) solid #f7ef08;
+      border-left: calc(calc(50px/2) /1.2) solid transparent;
+      border-right: calc(calc(20px/2) /1.2) solid transparent;
+      top: calc(calc(-45px/2) /1.2);
+      left: calc(calc(-65px/2) /1.2);    
+    }
+
+    #star:after {
+      top: calc(calc(3px/2) /1.2) ;
+      left: calc(calc(-105px/2) /1.2) ;
+      border-right: calc(calc(120px/2) /1.2)  solid transparent;
+      border-bottom: calc(calc(70px/2) /1.2)  solid #f7ef08;
+      border-left: calc(calc(100px/2)  /1.2) solid transparent;    
+    }
+
+
   #displayBig{
 
     width: calc(1400px / 1.2);
@@ -510,8 +578,38 @@ label:hover .door {
 
 @media only screen and (max-width: 1023px){
   /* insert lower resolution */
-  #displayBig{
 
+
+  #myStar{
+    top: calc(-350px /2);
+    left: calc(640px / 2);
+  }
+    
+    #star {  
+      border-right: calc(130px/4)  solid transparent;
+      border-bottom: calc(70px/4)  solid #f7ef08;
+      border-left: calc(80px/4)  solid transparent;    
+    }
+
+    #star:before {
+      border-bottom: calc(70px/4) solid #f7ef08;
+      border-left: calc(50px/4) solid transparent;
+      border-right: calc(20px/4) solid transparent;
+      top: calc(-45px/4);
+      left: calc(-65px/4);    
+    }
+
+    #star:after {
+      top: calc(3px/4) ;
+      left: calc(-105px/4) ;
+      border-right: calc(120px/4)  solid transparent;
+      border-bottom: calc(70px/4)  solid #f7ef08;
+      border-left: calc(100px/4)  solid transparent;    
+    }
+
+
+
+  #displayBig{
     width: calc(1400px / 2);
     height: calc(1000px / 2);
     border: 3px solid white;

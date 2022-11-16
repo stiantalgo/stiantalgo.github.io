@@ -18,6 +18,7 @@ window.addEventListener("load", function () {
     
     startHidden();
     allowedDays(24); // set day here
+    addMiniArt(3);
     addArtEventListeners(3);
 
     function addArtEventListeners(days){
@@ -26,6 +27,13 @@ window.addEventListener("load", function () {
                 displayBig.style.display = "block";
                 displayBig.style.background = `url(./dailyart/art${i}.jpg`;
             })
+        }
+    }
+
+    function addMiniArt(days){
+        for(let i = 1; i <= days; i++){
+            document.getElementById(`back${i}`).style.background = `url(./dailyart/art${i}.jpg`
+            document.getElementById(`back${i}`).style.backgroundSize = "cover";
         }
     }
 
