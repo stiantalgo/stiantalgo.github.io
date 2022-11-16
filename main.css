@@ -26,7 +26,6 @@ body::-webkit-scrollbar{
   width: 1400px;
   height: 1000px;
   /* margin: 0 auto; */
-
   position:absolute;
   transform: translate(-50%, -50%);
   left: 50%;

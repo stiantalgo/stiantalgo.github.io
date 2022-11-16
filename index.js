@@ -4,8 +4,7 @@ window.addEventListener("load", function () {
     const startBtn = this.document.getElementById("startBtn");
     const bgMusic = new Audio("https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/jb_rock.mp3?raw=true");
   
-    const date = new Date;
-    let day = date.getDate();    
+ 
 
 
     startBtn.addEventListener("click", openCalendar);
@@ -14,7 +13,8 @@ window.addEventListener("load", function () {
         displayBig.style.display = "none";
     });
 
-
+    const date = new Date;
+    let day = date.getDate();   
     
     startHidden();
     allowedDays(24); // set day here
@@ -26,6 +26,7 @@ window.addEventListener("load", function () {
                 document.getElementById(`back${i}`).addEventListener("click", () => {
                 displayBig.style.display = "block";
                 displayBig.style.background = `url(./dailyart/art${i}.jpg`;
+                displayBig.style.backgroundSize = "cover";
             })
         }
     }
