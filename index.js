@@ -15,12 +15,13 @@ window.addEventListener("load", function () {
     });
 
 
-    addArtEventListeners();
+    
     startHidden();
     allowedDays(24); // set day here
+    addArtEventListeners(3);
 
-    function addArtEventListeners(){
-        for(let i = 1; i <= 3; i++){
+    function addArtEventListeners(days){
+        for(let i = 1; i <= days; i++){
                 document.getElementById(`back${i}`).addEventListener("click", () => {
                 displayBig.style.display = "block";
                 displayBig.style.background = `url(./dailyart/art${i}.jpg`;
