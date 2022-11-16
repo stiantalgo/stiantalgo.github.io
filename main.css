@@ -7,14 +7,11 @@ body {
   text-align: center;
   color: rgb(0, 0, 0);
 
-
+  /* hidden scrollbar */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  
 
-
-  /* Custom Cursor */
-  
+  /* Custom Cursor */  
   cursor: url(img/pointer.png), auto;
 }
 
@@ -61,20 +58,17 @@ button:hover{
   cursor: url(./img/ChristmasCursor.jpg), auto;
 }
 
-.hatches{
+/* .hatches{
   width: 70px;
-  height: 70px;  
-  
+  height: 70px;    
 }
-
-
 
 .hatches:hover{
   background-color: #090a0f91;
   color: purple;
   box-shadow: 0 0 10px 3px;
   
-}
+} */
 
 #startBtn{
   border-radius: 25px;
@@ -90,16 +84,11 @@ button:hover{
   top: -650px;
   width: 300px;
   height: 100px;
-  
 }
 
 
 
 /* Doors */
-
-
-
-
 .allHatches{
   width: 80px;
   height: 80px;  
@@ -139,8 +128,7 @@ label {
   justify-content: center;
 }
 
-.door .back {
-  
+.door .back {  
   background-color: rgba(53, 0, 0, 0.979);
   transform: rotateY(180deg);
 
@@ -167,12 +155,18 @@ label:hover .door {
 
 /* Door goodies / art*/
 
+
 .day-1 .back {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/child.svg);
 }
 
 .day-2 .back {
   background: url(./img/bg2-icon.png);
+}
+
+.day-3 .back {
+  background: url(./img/julkalender.png);
+  background-size: cover;  
 }
 
 
