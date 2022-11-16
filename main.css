@@ -164,16 +164,16 @@ label:hover .door {
 }
 
 #myStar{
+pointer-events:none;
 position: relative;
 top: -350px;
 left: 640px;
 transform: rotateZ(-34deg);
-filter: blur(5px);
+filter: blur(15px);
 animation: blink 2.5s infinite;
 }
 
-#star {
-  
+#star {  
   position: relative;
   display: block;
   color: red;
@@ -183,8 +183,9 @@ animation: blink 2.5s infinite;
   border-bottom: calc(70px/2)  solid #f7ef08;
   border-left: calc(80px/2)  solid transparent;
   transform: rotate(35deg);
+
 }
-#star:before {
+#star:before {  
   border-bottom: calc(70px/2) solid #f7ef08;
   border-left: calc(50px/2) solid transparent;
   border-right: calc(20px/2) solid transparent;
@@ -196,6 +197,7 @@ animation: blink 2.5s infinite;
   display: block;
   content: '';
   transform: rotate(-35deg);
+
 }
 #star:after {
   position: absolute;
@@ -210,6 +212,7 @@ animation: blink 2.5s infinite;
   border-left: calc(100px/2)  solid transparent;
   transform: rotate(-70deg);
   content: '';
+ 
 }
 
 
