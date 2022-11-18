@@ -112,7 +112,7 @@ button:hover{
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: rgb(129, 27, 32);
+  background-color: rgb(139, 17, 23);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -178,7 +178,9 @@ button:hover{
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: rgb(129, 27, 32);
+  background-color: rgb(139, 17, 23);
+  /* background-image: url(./icons/notmuchSnow.png);
+  background-size: cover; */
   -webkit-transition: .4s;
   transition: .4s;
 }

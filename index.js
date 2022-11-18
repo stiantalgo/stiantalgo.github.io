@@ -4,6 +4,8 @@ window.addEventListener("load", function () {
     const startBtn = this.document.getElementById("startBtn");
     const muteMusic = this.document.querySelector(".switchBtn");
     const muteLabel = this.document.querySelector(".switch");
+    const snowLabel = this.document.querySelector(".switchSnow");
+    const snowCheck = this.document.querySelector(".switchBtnSnow");
     //const bgMusic = new Audio("https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/jb_rock.mp3?raw=true");
     const bgMusic = new Audio("https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/JulesangHøgereBjelle.mp3?raw=true");
   
@@ -14,10 +16,19 @@ window.addEventListener("load", function () {
 
     displayBig.addEventListener("click", () =>{
         displayBig.innerHTML = "";
+        displayBig.style.background = "";
         displayBig.style.display = "none";
     });
 
     muteLabel.addEventListener("click", muteMusicFunction);
+    snowLabel.addEventListener("click", () => {
+        if(snowCheck.checked){
+            removeSnowDivs();
+        }
+        else if(!snowCheck.checked){
+            addSnowDivs(150);
+        }
+    });
 
     const date = new Date;
     let day = date.getDate();   
@@ -84,12 +95,12 @@ window.addEventListener("load", function () {
     function muteMusicFunction(){
         if(muteMusic.checked == true){
             bgMusic.pause();
-
         }
         else{
             bgMusic.play();
         }
     }
+
 
     function allowedDays(num){
         for(let i = 1; i <= num; i++){
@@ -107,9 +118,12 @@ window.addEventListener("load", function () {
         document.getElementById(`day${num}`).style.visibility = "visible";
     }
 
-    function showItem() {    
-        displayBig.style.display = "block";
-        displayBig.style.background = "url(./img/Art1.jpg)";
+    function removeSnowDivs(){
+        // remove snow divs
+        let snowDivs = document.getElementById("snowContainer");
+        while(snowDivs.firstChild ){
+            snowDivs.removeChild(snowDivs.firstChild);
+        }
     }
 
     function addSnowDivs(num) {
@@ -128,21 +142,9 @@ window.addEventListener("load", function () {
     //     }
     // }
 
-    // addSnowDivs(50);
-
-    // myBtn.addEventListener("click", () =>{
-    //     let myNum = snowInput.value;
-    //     if(myNum > 200){
-    //         myNum = 200;
-    //     }
-    //     addSnowDivs(myNum);
-
-    // });
-
-    // let totalHatches = 24;
 
     // function addHatches(){
-    //     for(let i = 1; i <= totalHatches; i++){
+    //     for(let i = 1; i <= day; i++){
 
     //         const dayHatch = document.createElement("div");
     //         dayHatch.className = `day-${i}`;
