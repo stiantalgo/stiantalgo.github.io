@@ -11,6 +11,7 @@ window.addEventListener("load", function () {
     startBtn.addEventListener("click", openCalendar);
 
     displayBig.addEventListener("click", () =>{
+        displayBig.innerHTML = "";
         displayBig.style.display = "none";
     });
 
@@ -20,14 +21,22 @@ window.addEventListener("load", function () {
     startHidden();
     allowedDays(24); // set day here
     addMiniArt(3);
-    addArtEventListeners(3);
+    addArtEventListeners(4);
 
     function addArtEventListeners(days){
         for(let i = 1; i <= days; i++){
                 document.getElementById(`back${i}`).addEventListener("click", () => {
                 displayBig.style.display = "block";
-                displayBig.style.background = `url(./dailyart/art${i}.jpg`;
-                displayBig.style.backgroundSize = "cover";
+                if(i == 4){
+                    embedVideo(i);
+                    displayBig.style.backgroundColor = "black";
+                    
+                }
+                else{
+                    displayBig.style.background = `url(./dailyart/art${i}.jpg`;
+                    displayBig.style.backgroundSize = "cover";
+                }
+               
             })
         }
     }
@@ -37,6 +46,24 @@ window.addEventListener("load", function () {
             document.getElementById(`back${i}`).style.background = `url(./dailyart/art${i}.jpg`
             document.getElementById(`back${i}`).style.backgroundSize = "cover";
         }
+    }
+
+    function embedVideo(index){
+        displayBig.innerHTML = `<iframe 
+                                width="90%"
+                                height="80%" 
+                                src="https://www.youtube.com/embed/PwM_zBK2cgk" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; 
+                                autoplay; 
+                                clipboard-write; 
+                                encrypted-media; 
+                                gyroscope; 
+                                picture-in-picture" 
+                                allowfullscreen>
+                                </iframe>`;
+                                background: `radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)`;
     }
 
     function openCalendar() {
