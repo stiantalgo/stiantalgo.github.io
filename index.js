@@ -2,6 +2,8 @@ window.addEventListener("load", function () {
     const displayBig = this.document.getElementById("displayBig");
     const container = this.document.getElementById("container");
     const startBtn = this.document.getElementById("startBtn");
+    const muteMusic = this.document.querySelector(".switchBtn");
+    const muteLabel = this.document.querySelector(".switch");
     //const bgMusic = new Audio("https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/jb_rock.mp3?raw=true");
     const bgMusic = new Audio("https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/JulesangHøgereBjelle.mp3?raw=true");
   
@@ -14,6 +16,8 @@ window.addEventListener("load", function () {
         displayBig.innerHTML = "";
         displayBig.style.display = "none";
     });
+
+    muteLabel.addEventListener("click", muteMusicFunction);
 
     const date = new Date;
     let day = date.getDate();   
@@ -76,6 +80,16 @@ window.addEventListener("load", function () {
         bgMusic.loop = true;
         bgMusic.play();        
     } 
+
+    function muteMusicFunction(){
+        if(muteMusic.checked == true){
+            bgMusic.pause();
+
+        }
+        else{
+            bgMusic.play();
+        }
+    }
 
     function allowedDays(num){
         for(let i = 1; i <= num; i++){
