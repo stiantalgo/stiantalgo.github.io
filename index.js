@@ -2,7 +2,8 @@ window.addEventListener("load", function () {
     const displayBig = this.document.getElementById("displayBig");
     const container = this.document.getElementById("container");
     const startBtn = this.document.getElementById("startBtn");
-    const bgMusic = new Audio("https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/jb_rock.mp3?raw=true");
+    //const bgMusic = new Audio("https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/jb_rock.mp3?raw=true");
+    const bgMusic = new Audio("https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/Julesang.mp3?raw=true");
   
  
 
