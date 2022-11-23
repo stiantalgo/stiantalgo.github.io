@@ -40,9 +40,9 @@ window.addEventListener("load", function () {
     let day = date.getDate();   
     
     startHidden();
-    allowedDays(24); // set day here
-    addMiniArt(24);
-    addArtEventListeners(24);
+    allowedDays(24);            // set day here
+    addMiniArt(24);             // set day here
+    addArtEventListeners(24);   // set day here
 
     function addArtEventListeners(days){
         for(let i = 1; i <= days; i++){
