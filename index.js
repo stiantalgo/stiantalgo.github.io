@@ -6,7 +6,6 @@ window.addEventListener("load", function () {
     const muteLabel = this.document.querySelector(".switch");
     const snowLabel = this.document.querySelector(".switchSnow");
     const snowCheck = this.document.querySelector(".switchBtnSnow");
-    //const bgMusic = new Audio("https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/jb_rock.mp3?raw=true");
     const bgMusic = new Audio("https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/JulesangHøgereBjelle.mp3?raw=true");
   
  
@@ -14,13 +13,20 @@ window.addEventListener("load", function () {
 
     startBtn.addEventListener("click", openCalendar);
 
+    // hide display and clear it.
     displayBig.addEventListener("click", () =>{
         displayBig.innerHTML = "";
         displayBig.style.background = "";
         displayBig.style.display = "none";
+
+        //unpause music if paused
+        if(bgMusic.paused){
+            bgMusic.play();
+        }        
     });
 
     muteLabel.addEventListener("click", muteMusicFunction);
+
     snowLabel.addEventListener("click", () => {
         if(snowCheck.checked){
             removeSnowDivs();
@@ -64,6 +70,10 @@ window.addEventListener("load", function () {
     }
 
     function embedVideo(index){
+        if(bgMusic.play){
+            bgMusic.pause();
+        }
+
         displayBig.innerHTML = `<iframe 
                                 width="90%"
                                 height="80%" 
