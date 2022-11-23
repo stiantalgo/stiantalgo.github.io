@@ -41,8 +41,8 @@ window.addEventListener("load", function () {
     
     startHidden();
     allowedDays(24); // set day here
-    addMiniArt(3);
-    addArtEventListeners(4);
+    addMiniArt(24);
+    addArtEventListeners(24);
 
     function addArtEventListeners(days){
         for(let i = 1; i <= days; i++){
@@ -53,8 +53,12 @@ window.addEventListener("load", function () {
                     displayBig.style.backgroundColor = "black";
                     
                 }
+                if(i ==11){
+                    displayBig.style.background = `url(./dailyart/art${i}.gif`;
+                    displayBig.style.backgroundSize = "cover"
+                }
                 else{
-                    displayBig.style.background = `url(./dailyart/art${i}.jpg`;
+                    displayBig.style.background = `url(./dailyart/art${i}.png`;
                     displayBig.style.backgroundSize = "cover";
                 }
                
@@ -64,8 +68,12 @@ window.addEventListener("load", function () {
 
     function addMiniArt(days){
         for(let i = 1; i <= days; i++){
-            document.getElementById(`back${i}`).style.background = `url(./dailyart/art${i}.jpg`
-            document.getElementById(`back${i}`).style.backgroundSize = "cover";
+
+
+                document.getElementById(`back${i}`).style.background = `url(./dailyart/art${i}.png`
+                document.getElementById(`back${i}`).style.backgroundSize = "cover";
+
+
         }
     }
 
