@@ -50,18 +50,20 @@ window.addEventListener("load", function () {
                 displayBig.style.display = "block";
                 if(i == 4){
                     embedVideo(i);
-                    displayBig.style.backgroundColor = "black";
-                    
+                    displayBig.style.backgroundColor = "black";                    
                 }
-                if(i ==11){
+
+                if(i == 11){
                     displayBig.style.background = `url(./dailyart/art${i}.gif`;
-                    displayBig.style.backgroundSize = "cover"
+                    // displayBig.style.backgroundSize = "cover";
+                    displayBig.style.backgroundRepeat = "no-repeat";
+                    displayBig.style.backgroundPosition = "center";                    
                 }
+
                 else{
                     displayBig.style.background = `url(./dailyart/art${i}.png`;
                     displayBig.style.backgroundSize = "cover";
-                }
-               
+                }               
             })
         }
     }
