@@ -75,6 +75,48 @@ button:hover{
   height: 100px;
 }
 
+/* Credits screen */
+
+#creditsDiv{
+  position: relative;
+  background-color: #1c120b;
+  box-shadow: 0 0 50px 20px;
+
+  top: -100px;
+  left: 200px;
+  height: 800px;
+  width: 1200px;
+}
+
+/* Credits button */
+
+#credits{
+  position: relative;
+  border-radius: 15px;
+  font-size: 16px;
+  font-family: sans-serif;
+  background-color: #1b2735;
+  color: aliceblue;
+  top: 790px;
+  left: 740px;
+  width: 100px;
+  height: 30px;
+}
+
+#credits:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#creditFlex{
+  flex: 1;
+  border: 2px solid yellow;
+  padding: 20px;
+  max-width: 90%;
+  max-height: 90%;
+
+}
+
 
 /* Music button */
 
@@ -493,6 +535,22 @@ animation: blink 2.5s infinite;
 @media only screen and (max-height: 1080px){
   /* insert lower resolution */
 
+  #creditsDiv{
+    top: calc(-100px /1.2);
+    left: calc(200px /1.2);
+    height: calc(800px /1.2);
+    width: calc(1200px /1.2);
+  }
+  
+  
+  #credits{
+    font-size: calc(16px /1.2);
+    top: calc(790px /1.2);
+    left: calc(740px /1.2);
+    width: calc(100px /1.2);
+    height: calc(30px /1.2);
+  }
+
   #myStar{
     top: calc(-350px /1.2);
     left: calc(640px / 1.2);
@@ -772,6 +830,23 @@ animation: blink 2.5s infinite;
 
 @media only screen and (max-width: 1023px){
   /* insert lower resolution */
+
+  #creditsDiv{
+    top: calc(-100px /2);
+    left: calc(200px /2);
+    height: calc(800px /2);
+    width: calc(1200px /2);
+  }
+  
+  
+  #credits{
+    font-size: calc(16px /2);
+    top: calc(790px /2);
+    left: calc(740px /2);
+    width: calc(100px /2);
+    height: calc(30px /2);
+  }
+
 
 
   #myStar{

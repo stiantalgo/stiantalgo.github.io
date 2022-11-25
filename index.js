@@ -7,7 +7,8 @@ window.addEventListener("load", function () {
     const snowLabel = this.document.querySelector(".switchSnow");
     const snowCheck = this.document.querySelector(".switchBtnSnow");
     const bgMusic = new Audio("https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/JulesangHøgereBjelle.mp3?raw=true");
-  
+    const creditsBtn = this.document.querySelector("#credits");
+    const creditsDiv = this.document.querySelector("#creditsDiv");
  
 
 
@@ -26,6 +27,8 @@ window.addEventListener("load", function () {
         }        
     });
 
+    creditsBtn.addEventListener("click", openCredits);
+
     muteLabel.addEventListener("click", muteMusicFunction);
 
     snowLabel.addEventListener("click", () => {
@@ -36,6 +39,7 @@ window.addEventListener("load", function () {
             addSnowDivs(150);
         }
     });
+    
 
     const date = new Date;
     let day = date.getDate();   
@@ -70,6 +74,7 @@ window.addEventListener("load", function () {
             })
         }
     }
+
 
     function addMiniArt(days){
         for(let i = 1; i <= days; i++){
@@ -115,6 +120,15 @@ window.addEventListener("load", function () {
         bgMusic.loop = true;
         bgMusic.play();        
     } 
+
+    function openCredits(){
+        if(creditsDiv.hidden == true){
+            creditsDiv.hidden = false;
+        }else{
+            creditsDiv.hidden = true;
+        }
+
+    }
 
     function muteMusicFunction(){
         if(muteMusic.checked == true){
