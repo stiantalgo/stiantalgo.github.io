@@ -22,6 +22,7 @@ window.addEventListener("load", function () {
         //unpause music if paused
         if(bgMusic.paused){
             bgMusic.play();
+            muteMusic.checked = false;
         }        
     });
 
@@ -63,6 +64,8 @@ window.addEventListener("load", function () {
                 else{
                     displayBig.style.background = `url(./dailyart/art${i}.png`;
                     displayBig.style.backgroundSize = "cover";
+                    displayBig.style.backgroundRepeat = "no-repeat";
+                    displayBig.style.backgroundPosition = "center"; 
                 }               
             })
         }
@@ -82,6 +85,7 @@ window.addEventListener("load", function () {
     function embedVideo(index){
         if(bgMusic.play){
             bgMusic.pause();
+            muteMusic.checked = true;
         }
 
         displayBig.innerHTML = `<iframe 

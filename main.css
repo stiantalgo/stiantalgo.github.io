@@ -1,12 +1,12 @@
 body {
   height: 100vh;
+  width: auto;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow: hidden;
   overflow-y: auto;
   filter: drop-shadow(0 0 10px white);
   text-align: center;
   color: rgb(0, 0, 0);
-
   /* hidden scrollbar */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -14,6 +14,7 @@ body {
   /* Custom Cursor */  
   cursor: url(img/pointer.png), auto;
 }
+
 
 body::-webkit-scrollbar{
   display: none;
