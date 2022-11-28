@@ -38,11 +38,11 @@ iframe {
   position:absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 50%;
-  border-radius: 20px;
+  top: 50%;  
   text-align: center;
-  border: 5px solid white;
 
+  border-radius: 20px;
+  border: none;
 }
 
 
@@ -120,7 +120,7 @@ a{
 #creditNames{
   padding: 15px;
   margin: 0 auto;
-text-align: left;
+  text-align: left;
 }
 
 #creditWrapper{
@@ -603,7 +603,8 @@ animation: blink 2.5s infinite;
 
     width: calc(1400px / 1.2);
     height: calc(1000px / 1.2);
-    border: 3px solid white;
+    /* border: 3px solid white; */
+    border: none;
   }
   
   #container{
@@ -905,7 +906,8 @@ animation: blink 2.5s infinite;
   #displayBig{
     width: calc(1400px / 2);
     height: calc(1000px / 2);
-    border: 3px solid white;
+    /* border: 3px solid white; */
+    border: none;
   }
   
   #container{
