@@ -94,6 +94,11 @@ button:hover{
 
 /* Credits button */
 
+a{
+  text-decoration: none;
+  color: white;
+}
+
 #credits{
   position: relative;
   border-radius: 15px;
@@ -112,6 +117,11 @@ button:hover{
   transform: scale(1.1);
 }
 
+#creditNames{
+  padding: 15px;
+  margin: 0 auto;
+text-align: left;
+}
 
 #creditWrapper{
   font-size: 16px;
