@@ -15,6 +15,9 @@ body {
   cursor: url(img/pointer.png), auto;
 }
 
+/* :hover{
+  cursor: url(img/pointer.png), auto;
+} */
 
 body::-webkit-scrollbar{
   display: none;
@@ -43,6 +46,7 @@ iframe {
 }
 
 
+
 #container{
   filter: blur(10px);
   margin: auto;
@@ -50,7 +54,7 @@ iframe {
 
   width: 1600px;
   height: 1016px;
-  background-image: url(./img/julkalender3.png);
+  background-image: url(./img/julkalender.png);
   background-size:cover;
 }
 
@@ -98,8 +102,8 @@ button:hover{
   background-color: #1b2735;
   color: aliceblue;
   top: 790px;
-  left: 740px;
-  width: 100px;
+  left: 735px;
+  width: 80px;
   height: 30px;
 }
 
@@ -108,14 +112,16 @@ button:hover{
   transform: scale(1.1);
 }
 
-#creditFlex{
-  flex: 1;
-  border: 2px solid yellow;
-  padding: 20px;
-  max-width: 90%;
-  max-height: 90%;
 
-}
+#creditWrapper{
+  font-size: 16px;
+  font-family: "Ink Free", Helvetica, sans-serif;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap:wrap;
+  display: flex;
+  color: rgb(233, 224, 224);
+  }
 
 
 /* Music button */
@@ -535,6 +541,10 @@ animation: blink 2.5s infinite;
 @media only screen and (max-height: 1080px){
   /* insert lower resolution */
 
+  #creditWrapper{
+    font-size: calc(16px / 1.2);
+  }
+  
   #creditsDiv{
     top: calc(-100px /1.2);
     left: calc(200px /1.2);
@@ -546,8 +556,8 @@ animation: blink 2.5s infinite;
   #credits{
     font-size: calc(16px /1.2);
     top: calc(790px /1.2);
-    left: calc(740px /1.2);
-    width: calc(100px /1.2);
+    left: calc(735px /1.2);
+    width: calc(80px /1.2);
     height: calc(30px /1.2);
   }
 
@@ -831,6 +841,10 @@ animation: blink 2.5s infinite;
 @media only screen and (max-width: 1023px){
   /* insert lower resolution */
 
+  #creditWrapper{
+    font-size: calc(16px / 1.2);
+  }
+
   #creditsDiv{
     top: calc(-100px /2);
     left: calc(200px /2);
@@ -841,9 +855,9 @@ animation: blink 2.5s infinite;
   
   #credits{
     font-size: calc(16px /2);
-    top: calc(790px /2);
-    left: calc(740px /2);
-    width: calc(100px /2);
+    top: calc(780px /2);
+    left: calc(730px /2);
+    width: calc(80px /2);
     height: calc(30px /2);
   }
 
