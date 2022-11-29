@@ -9,6 +9,7 @@ window.addEventListener("load", function () {
     const bgMusic = new Audio("https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/JulesangHøgereBjelle.mp3?raw=true");
     const creditsBtn = this.document.querySelector("#credits");
     const creditsDiv = this.document.querySelector("#creditsDiv");
+    const snowz = this.document.querySelector(".snow");
 
 
 
@@ -68,6 +69,7 @@ window.addEventListener("load", function () {
             document.getElementById(`back${i}`).addEventListener("click", () => {
                 displayBig.style.display = "block";
                 container.style.filter = "blur(20px)";
+                
                 if (i == 4) {
                     embedVideo(i);
                     displayBig.style.backgroundColor = "black";

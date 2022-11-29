@@ -56,6 +56,7 @@ iframe {
   border-radius: 20px;
   border: none;
   filter: blur(0px);
+  z-index: 50;
 }
 
 #container{
@@ -1187,6 +1188,7 @@ animation: blink 2.5s infinite;
   height: 10px;
   background: white;
   border-radius: 50%;
+  z-index: 0;
 }
 .snow:nth-child(1) {
   opacity: 0.8221;
