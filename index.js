@@ -69,9 +69,10 @@ window.addEventListener("load", function () {
 
                 else {
                     displayBig.style.background = `url(./dailyart/art${i}.png`;
-                    displayBig.style.backgroundSize = "cover";
+                    displayBig.style.backgroundSize = "contain";
                     displayBig.style.backgroundRepeat = "no-repeat";
                     displayBig.style.backgroundPosition = "center";
+                    //displayBig.style.objectFit = "scale-down";
                 }
             })
         }
