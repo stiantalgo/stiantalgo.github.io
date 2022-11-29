@@ -44,13 +44,26 @@ window.addEventListener("load", function () {
 
     const date = new Date;
     let day = date.getDate();
+    let month = date.getMonth() +1;
+
+    if(day > 24){
+        day = 24;
+    }else{
+        day = date.getDate();
+    }
 
     startHidden();
     allowedDays(24);            // set day here
     addMiniArt(24);             // set day here
     addArtEventListeners(24);   // set day here
 
+
+
     function addArtEventListeners(days) {
+        if(month == 12){
+
+
+        }
         for (let i = 1; i <= days; i++) {
             document.getElementById(`back${i}`).addEventListener("click", () => {
                 displayBig.style.display = "block";
@@ -83,6 +96,7 @@ window.addEventListener("load", function () {
         for (let i = 1; i <= days; i++) {
             document.getElementById(`back${i}`).style.background = `url(./dailyart/art${i}.png`
             document.getElementById(`back${i}`).style.backgroundSize = "cover";
+            document.getElementById(`back${i}`).style.backgroundPosition = "center";
         }
     }
 
