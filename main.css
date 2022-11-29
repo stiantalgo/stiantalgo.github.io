@@ -30,11 +30,10 @@ iframe {
   margin-right: auto;
 }
 
-#displayBig{
+/* #displayBig{
 
   width: 1400px;
   height: 1000px;
-  /* margin: 0 auto; */
   position:absolute;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -43,20 +42,32 @@ iframe {
 
   border-radius: 20px;
   border: none;
+  filter: blur(0px);
+} */
+
+#displayBig{
+  width: 1400px;
+  height: 1000px;
+  position:absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 560px;  
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  filter: blur(0px);
 }
-
-
 
 #container{
   filter: blur(10px);
   margin: auto;
-  width: 50%;  
-
+  width: 50%;
   width: 1600px;
   height: 1016px;
   background-image: url(./img/julkalender.png);
-  background-size:cover;
+  background-size:cover;  
 }
+
 
 button:hover{
   cursor: pointer;
@@ -243,6 +254,7 @@ a{
   -webkit-transition: .4s;
   transition: .4s;
 }
+
 
 .switchBtnSnow:checked + .sliderSnow {
   background-color: #010c1400;
@@ -603,11 +615,16 @@ animation: blink 2.5s infinite;
 
     width: calc(1400px / 1.2);
     height: calc(1000px / 1.2);
-    /* border: 3px solid white; */
+    top: calc(560px / 1.2);  
     border: none;
   }
   
   #container{
+    width: calc(1600px / 1.2);
+    height: calc(1016px / 1.2);
+  }
+
+  #container2{
     width: calc(1600px / 1.2);
     height: calc(1016px / 1.2);
   }
@@ -906,11 +923,16 @@ animation: blink 2.5s infinite;
   #displayBig{
     width: calc(1400px / 2);
     height: calc(1000px / 2);
-    /* border: 3px solid white; */
+    top: calc(610px / 2);  
     border: none;
   }
   
   #container{
+    width: calc(1600px / 2);
+    height: calc(1016px / 2);
+  }
+
+  #container2{
     width: calc(1600px / 2);
     height: calc(1016px / 2);
   }

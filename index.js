@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {    
+window.addEventListener("load", function () {
     const displayBig = this.document.getElementById("displayBig");
     const container = this.document.getElementById("container");
     const startBtn = this.document.getElementById("startBtn");
@@ -9,22 +9,23 @@ window.addEventListener("load", function () {
     const bgMusic = new Audio("https://github.com/stiantalgo/stiantalgo.github.io/blob/main/media/JulesangHøgereBjelle.mp3?raw=true");
     const creditsBtn = this.document.querySelector("#credits");
     const creditsDiv = this.document.querySelector("#creditsDiv");
- 
+
 
 
     startBtn.addEventListener("click", openCalendar);
 
     // hide display and clear it.
-    displayBig.addEventListener("click", () =>{
+    displayBig.addEventListener("click", () => {
         displayBig.innerHTML = "";
         displayBig.style.background = "";
         displayBig.style.display = "none";
+        container.style.filter = "blur(0px)";
 
         //unpause music if paused
-        if(bgMusic.paused){
+        if (bgMusic.paused) {
             bgMusic.play();
             muteMusic.checked = false;
-        }        
+        }
     });
 
     creditsBtn.addEventListener("click", openCredits);
@@ -32,63 +33,60 @@ window.addEventListener("load", function () {
     muteLabel.addEventListener("click", muteMusicFunction);
 
     snowLabel.addEventListener("click", () => {
-        if(snowCheck.checked){
+        if (snowCheck.checked) {
             removeSnowDivs();
         }
-        else if(!snowCheck.checked){
+        else if (!snowCheck.checked) {
             addSnowDivs(150);
         }
     });
-    
+
 
     const date = new Date;
-    let day = date.getDate();   
-    
+    let day = date.getDate();
+
     startHidden();
     allowedDays(24);            // set day here
     addMiniArt(24);             // set day here
     addArtEventListeners(24);   // set day here
 
-    function addArtEventListeners(days){
-        for(let i = 1; i <= days; i++){
-                document.getElementById(`back${i}`).addEventListener("click", () => {
+    function addArtEventListeners(days) {
+        for (let i = 1; i <= days; i++) {
+            document.getElementById(`back${i}`).addEventListener("click", () => {
                 displayBig.style.display = "block";
-                if(i == 4){
+                container.style.filter = "blur(20px)";
+                if (i == 4) {
                     embedVideo(i);
-                    displayBig.style.backgroundColor = "black";                    
+                    displayBig.style.backgroundColor = "black";
                 }
 
-                if(i == 11){
+                if (i == 11) {
                     displayBig.style.background = `url(./dailyart/art${i}.gif`;
                     // displayBig.style.backgroundSize = "cover";
                     displayBig.style.backgroundRepeat = "no-repeat";
                     displayBig.style.backgroundPosition = "center";                    
                 }
 
-                else{
+                else {
                     displayBig.style.background = `url(./dailyart/art${i}.png`;
                     displayBig.style.backgroundSize = "cover";
                     displayBig.style.backgroundRepeat = "no-repeat";
-                    displayBig.style.backgroundPosition = "center"; 
-                }               
+                    displayBig.style.backgroundPosition = "center";
+                }
             })
         }
     }
 
 
-    function addMiniArt(days){
-        for(let i = 1; i <= days; i++){
-
-
-                document.getElementById(`back${i}`).style.background = `url(./dailyart/art${i}.png`
-                document.getElementById(`back${i}`).style.backgroundSize = "cover";
-
-
+    function addMiniArt(days) {
+        for (let i = 1; i <= days; i++) {
+            document.getElementById(`back${i}`).style.background = `url(./dailyart/art${i}.png`
+            document.getElementById(`back${i}`).style.backgroundSize = "cover";
         }
     }
 
-    function embedVideo(index){
-        if(bgMusic.play){
+    function embedVideo(index) {
+        if (bgMusic.play) {
             bgMusic.pause();
             muteMusic.checked = true;
         }
@@ -107,7 +105,7 @@ window.addEventListener("load", function () {
                                 picture-in-picture" 
                                 allowfullscreen>
                                 </iframe>`;
-                                background: `radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)`;
+        background: `radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)`;
     }
 
     function openCalendar() {
@@ -118,51 +116,55 @@ window.addEventListener("load", function () {
         // add music
         bgMusic.volume = 0.02;
         bgMusic.loop = true;
-        bgMusic.play();        
-    } 
+        bgMusic.play();
+    }
 
-    function openCredits(){
-        if(creditsDiv.hidden == true){
+    function openCredits() {
+        if (creditsDiv.hidden == true) {
             creditsDiv.hidden = false;
-        }else{
+        } else {
             creditsDiv.hidden = true;
         }
 
     }
 
-    function muteMusicFunction(){
-        if(muteMusic.checked == true){
+    function muteMusicFunction() {
+        if (muteMusic.checked == true) {
             bgMusic.pause();
         }
-        else{
+        else {
             bgMusic.play();
         }
     }
 
 
-    function allowedDays(num){
-        for(let i = 1; i <= num; i++){
+    function allowedDays(num) {
+        for (let i = 1; i <= num; i++) {
             showDoor(i);
         }
     }
-    
-    function startHidden(){
-        for(let i = 1; i <= 24; i++){
+
+    function startHidden() {
+        for (let i = 1; i <= 24; i++) {
             document.getElementById(`day${i}`).style.visibility = "hidden";
         }
     }
 
-    function showDoor(num){
+    function showDoor(num) {
         document.getElementById(`day${num}`).style.visibility = "visible";
     }
 
-    function removeSnowDivs(){
+    function removeSnowDivs() {
         // remove snow divs
         let snowDivs = document.getElementById("snowContainer");
-        while(snowDivs.firstChild ){
+        while (snowDivs.firstChild) {
             snowDivs.removeChild(snowDivs.firstChild);
         }
+
+
     }
+
+
 
     function addSnowDivs(num) {
         for (let i = 0; i < num; i++) {
@@ -215,8 +217,8 @@ window.addEventListener("load", function () {
 
 
 
-   
 
-    
+
+
 
 })
