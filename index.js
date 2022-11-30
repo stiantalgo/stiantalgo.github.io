@@ -111,14 +111,8 @@ window.addEventListener("load", function () {
             bgMusic.pause();
             muteMusic.checked = true;
         }
+        
         let link = "";
-
-        // if(index == 24){
-        //     link = "https://www.youtube.com/embed/PwM_zBK2cgk";
-        // }
-        // else if(index == 24){
-        //     link = "https://www.youtube.com/embed/LARSVIDEO";
-        // }
 
         switch (index) {
             case 24: link = "https://www.youtube.com/embed/PwM_zBK2cgk"; break;
@@ -146,6 +140,10 @@ window.addEventListener("load", function () {
 
     function embedGame(gameLink){
         let game = gameLink;
+        if (bgMusic.play) {
+            bgMusic.pause();
+            muteMusic.checked = true;
+        }
 
         displayBig.innerHTML =   `<iframe 
             width="90%"
