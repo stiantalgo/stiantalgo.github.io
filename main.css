@@ -103,7 +103,7 @@ button:hover{
   position: relative;
   background-color: #1c120b;
   box-shadow: 0 0 50px 20px;
-
+  border-radius: 80px;
   top: -100px;
   left: 200px;
   height: 800px;
@@ -114,7 +114,8 @@ button:hover{
 
 a{
   text-decoration: none;
-  color: white;
+  color: rgb(191, 192, 148);
+  text-decoration:underline;
 }
 
 #credits{
@@ -146,8 +147,8 @@ a{
   font-family: "Ink Free", Helvetica, sans-serif;
   height: 100%;
   flex-direction: column;
-  flex-wrap:wrap;
   display: flex;
+  flex-wrap:wrap;  
   color: rgb(233, 224, 224);
   }
 
@@ -875,7 +876,7 @@ animation: blink 2.5s infinite;
   /* insert lower resolution */
 
   #creditWrapper{
-    font-size: calc(16px / 1.2);
+    font-size: calc(16px / 2);
   }
 
   #creditsDiv{
