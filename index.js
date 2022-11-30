@@ -82,7 +82,7 @@ window.addEventListener("load", function () {
                 }
 
                 if(i == 18){
-                    displayBig.style.background = "";
+                    displayBig.style.background = `url(./dailyart/art${i}.png`;
                     embedGame("https://draggmaste.itch.io/christmas-runner");
                     displayBig.style.backgroundColor = "black";
                 }
@@ -111,7 +111,7 @@ window.addEventListener("load", function () {
             bgMusic.pause();
             muteMusic.checked = true;
         }
-        
+
         let link = "";
 
         switch (index) {
@@ -146,8 +146,8 @@ window.addEventListener("load", function () {
         }
 
         displayBig.innerHTML =   `<iframe 
-            width="90%"
-            height="80%" 
+            width="80%"
+            height="20%" 
             frameborder="0" 
             src="https://itch.io/embed/1814378" 
             width="552" 
