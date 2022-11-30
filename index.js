@@ -70,6 +70,7 @@ window.addEventListener("load", function () {
                 displayBig.style.display = "block";
                 container.style.filter = "blur(20px)";                
                 if (i == 24) {
+                    displayBig.style.background = "";
                     embedVideo(i);
                     displayBig.style.backgroundColor = "black";
                 }
@@ -78,6 +79,12 @@ window.addEventListener("load", function () {
                     displayBig.style.background = `url(./dailyart/art${i}.gif`;
                     displayBig.style.backgroundRepeat = "no-repeat";
                     displayBig.style.backgroundPosition = "center";                    
+                }
+
+                if(i == 18){
+                    displayBig.style.background = "";
+                    embedGame("https://draggmaste.itch.io/christmas-runner");
+                    displayBig.style.backgroundColor = "black";
                 }
 
                 else {
@@ -135,6 +142,20 @@ window.addEventListener("load", function () {
                                 allowfullscreen>
                                 </iframe>`;
         background: `radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)`;
+    }
+
+    function embedGame(gameLink){
+        let game = gameLink;
+
+        displayBig.innerHTML =   `<iframe 
+            width="90%"
+            height="80%" 
+            frameborder="0" 
+            src="https://itch.io/embed/1814378" 
+            width="552" 
+            height="167">
+            <a href="${game}">Christmas-Runner by draggmaste</a>
+            </iframe>`;
     }
 
     function openCalendar() {
