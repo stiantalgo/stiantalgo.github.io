@@ -47,7 +47,7 @@ window.addEventListener("load", function () {
     let day = date.getDate();
     let month = date.getMonth() +1;
 
-    if(day > 24){
+    if(day > 24 || month != 12){
         day = 24;
     }else{
         day = date.getDate();
@@ -68,8 +68,7 @@ window.addEventListener("load", function () {
         for (let i = 1; i <= days; i++) {
             document.getElementById(`back${i}`).addEventListener("click", () => {
                 displayBig.style.display = "block";
-                container.style.filter = "blur(20px)";
-                
+                container.style.filter = "blur(20px)";                
                 if (i == 24) {
                     embedVideo(i);
                     displayBig.style.backgroundColor = "black";
@@ -77,7 +76,6 @@ window.addEventListener("load", function () {
 
                 if (i == 11) {
                     displayBig.style.background = `url(./dailyart/art${i}.gif`;
-                    // displayBig.style.backgroundSize = "cover";
                     displayBig.style.backgroundRepeat = "no-repeat";
                     displayBig.style.backgroundPosition = "center";                    
                 }
@@ -87,7 +85,6 @@ window.addEventListener("load", function () {
                     displayBig.style.backgroundSize = "contain";
                     displayBig.style.backgroundRepeat = "no-repeat";
                     displayBig.style.backgroundPosition = "center";
-                    //displayBig.style.objectFit = "scale-down";
                 }
             })
         }
