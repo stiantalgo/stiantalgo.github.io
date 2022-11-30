@@ -88,6 +88,7 @@ button:hover{
   border: none;           
   position: relative;
   top: -650px;
+  left: 10px;
   width: 300px;
   height: 300px;
 }
@@ -637,6 +638,7 @@ animation: blink 2.5s infinite;
     font-size: calc(40px / 1.2);
   
     top: calc(-650px / 1.2);
+    left: calc(10px / 1.2);
     width: calc(300px / 1.2);
     height: calc(300px / 1.2); 
   }
@@ -945,6 +947,7 @@ animation: blink 2.5s infinite;
     font-size: calc(40px / 2);
   
     top: calc(-650px / 2);
+    left: calc(10px / 2);
     width: calc(300px / 2);
     height: calc(300px / 2);  
   }
