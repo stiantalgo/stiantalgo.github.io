@@ -75,13 +75,13 @@ window.addEventListener("load", function () {
                     displayBig.style.backgroundColor = "black";
                 }
 
-                if (i == 11) {
+                else if (i == 11) {
                     displayBig.style.background = `url(./dailyart/art${i}.gif`;
                     displayBig.style.backgroundRepeat = "no-repeat";
                     displayBig.style.backgroundPosition = "center";                    
                 }
 
-                if(i == 18){
+                else if(i == 18){
                     displayBig.style.background = `url(./dailyart/art${i}.png`;
                     embedGame("https://draggmaste.itch.io/christmas-runner");
                     displayBig.style.backgroundColor = "black";
@@ -113,7 +113,6 @@ window.addEventListener("load", function () {
         }
 
         let link = "";
-
         switch (index) {
             case 24: link = "https://www.youtube.com/embed/PwM_zBK2cgk"; break;
             case 8: link = "https://www.youtube.com/embed/brbHYliXVws"; break;
