@@ -69,7 +69,7 @@ window.addEventListener("load", function () {
             document.getElementById(`back${i}`).addEventListener("click", () => {
                 displayBig.style.display = "block";
                 container.style.filter = "blur(20px)";                
-                if (i == 24) {
+                if (i == 24 || i == 8) {
                     displayBig.style.background = "";
                     embedVideo(i);
                     displayBig.style.backgroundColor = "black";
@@ -116,6 +116,7 @@ window.addEventListener("load", function () {
 
         switch (index) {
             case 24: link = "https://www.youtube.com/embed/PwM_zBK2cgk"; break;
+            case 8: link = "https://www.youtube.com/embed/brbHYliXVws"; break;
         
             default:
                 break;
