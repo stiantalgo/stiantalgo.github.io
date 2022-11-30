@@ -16,9 +16,6 @@ body {
   
 }
 
-/* :hover{
-  cursor: url(img/pointer.png), auto;
-} */
 
 body::-webkit-scrollbar{
   display: none;
