@@ -13,6 +13,7 @@ body {
 
   /* Custom Cursor */  
   cursor: url(img/pointer.png), auto;
+  
 }
 
 /* :hover{
@@ -80,15 +81,19 @@ button:hover{
   border-radius: 25px;
   font-size: 40px;
   color: green;
-  background: rgb(71,2,2);
-  background: linear-gradient(229deg, rgba(71,2,2,1) 0%, 
-                            rgba(121,9,62,1) 25%, 
-                            rgba(1,70,31,1) 56%, 
-                            rgba(77,1,15,1) 100%);
+  background: url(./icons/open.png);
+  background-repeat: no-repeat;
+  background-size: contain;   
+  background-position: center;
+  border: none;           
   position: relative;
   top: -650px;
   width: 300px;
-  height: 100px;
+  height: 300px;
+}
+
+#startBtn:hover{
+  cursor: url(img/pointer.png), auto;
 }
 
 /* Credits screen */
@@ -633,7 +638,7 @@ animation: blink 2.5s infinite;
   
     top: calc(-650px / 1.2);
     width: calc(300px / 1.2);
-    height: calc(100px / 1.2); 
+    height: calc(300px / 1.2); 
   }
   
   .allHatches{
@@ -941,7 +946,7 @@ animation: blink 2.5s infinite;
   
     top: calc(-650px / 2);
     width: calc(300px / 2);
-    height: calc(100px / 2);  
+    height: calc(300px / 2);  
   }
   
   .allHatches{
