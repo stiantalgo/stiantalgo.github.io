@@ -54,9 +54,9 @@ window.addEventListener("load", function () {
     }
 
     startHidden();
-    allowedDays(24);            // set day here
-    addMiniArt(24);             // set day here
-    addArtEventListeners(24);   // set day here
+    allowedDays(day);            // set day here
+    addMiniArt(day);             // set day here
+    addArtEventListeners(day);   // set day here
 
 
 
@@ -70,7 +70,7 @@ window.addEventListener("load", function () {
                 displayBig.style.display = "block";
                 container.style.filter = "blur(20px)";
                 
-                if (i == 4) {
+                if (i == 24) {
                     embedVideo(i);
                     displayBig.style.backgroundColor = "black";
                 }
@@ -107,11 +107,26 @@ window.addEventListener("load", function () {
             bgMusic.pause();
             muteMusic.checked = true;
         }
+        let link = "";
+
+        // if(index == 24){
+        //     link = "https://www.youtube.com/embed/PwM_zBK2cgk";
+        // }
+        // else if(index == 24){
+        //     link = "https://www.youtube.com/embed/LARSVIDEO";
+        // }
+
+        switch (index) {
+            case 24: link = "https://www.youtube.com/embed/PwM_zBK2cgk"; break;
+        
+            default:
+                break;
+        }
 
         displayBig.innerHTML = `<iframe 
                                 width="90%"
                                 height="80%" 
-                                src="https://www.youtube.com/embed/PwM_zBK2cgk" 
+                                src="${link}" 
                                 title="YouTube video player" 
                                 frameborder="0" 
                                 allow="accelerometer; 
