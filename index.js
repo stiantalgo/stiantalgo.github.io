@@ -10,24 +10,24 @@ window.addEventListener("load", function () {
     const creditsBtn = this.document.querySelector("#credits");
     const creditsDiv = this.document.querySelector("#creditsDiv");
     const snowz = this.document.querySelector(".snow");
-
+    const body = this.document.querySelector("html");
+    let isOpen = false;
 
 
     startBtn.addEventListener("click", openCalendar);
 
-    // hide display and clear it.
+    //hide display and clear it.
     displayBig.addEventListener("click", () => {
-        displayBig.innerHTML = "";
-        displayBig.style.background = "";
-        displayBig.style.display = "none";
-        container.style.filter = "blur(0px)";
-
-        //unpause music if paused
-        if (bgMusic.paused) {
-            bgMusic.play();
-            muteMusic.checked = false;
-        }
+            closeDisplay();            
     });
+
+
+    // body.addEventListener("click", () => {
+    //     if(isOpen){
+    //         closeDisplay();
+    //     }
+    // });
+
 
     creditsBtn.addEventListener("click", openCredits);
 
@@ -59,16 +59,13 @@ window.addEventListener("load", function () {
     addArtEventListeners(day);   // set day here
 
 
-
     function addArtEventListeners(days) {
-        if(month == 12){
 
-
-        }
         for (let i = 1; i <= days; i++) {
             document.getElementById(`back${i}`).addEventListener("click", () => {
                 displayBig.style.display = "block";
-                container.style.filter = "blur(20px)";                
+                container.style.filter = "blur(20px)"; 
+                             
                 if (i == 24 || i == 8 || i == 14) {
                     displayBig.style.background = "";
                     embedVideo(i);
@@ -93,9 +90,21 @@ window.addEventListener("load", function () {
                     displayBig.style.backgroundRepeat = "no-repeat";
                     displayBig.style.backgroundPosition = "center";
                 }
+
+                isOpen = true;            
             })
         }
     }
+
+    // close window if clicked outside area
+    // this.document.querySelector("html").click(function (e) {
+    //     var target = e.target;
+
+    //     if (document.querySelector('target').closest("#bigDisplay").length == 0){
+            
+    //         closeDisplay();
+    //     }
+    // });
 
 
     function addMiniArt(days) {
@@ -156,6 +165,21 @@ window.addEventListener("load", function () {
             height="167">
             <a href="${game}">Christmas-Runner by draggmaste</a>
             </iframe>`;
+    }
+
+    
+    function closeDisplay(){
+        displayBig.innerHTML = "";
+        displayBig.style.background = "";
+        displayBig.style.display = "none";
+        container.style.filter = "blur(0px)";
+
+        //unpause music if paused
+        if (bgMusic.paused) {
+            bgMusic.play();
+            muteMusic.checked = false;
+        }
+        isOpen = false;
     }
 
     function openCalendar() {
