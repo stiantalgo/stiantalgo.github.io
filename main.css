@@ -149,6 +149,10 @@ a{
   color: rgb(233, 224, 224);
   }
 
+#back1:hover{
+  background: url(./dailyart/art1_b.png);
+}
+
 
 /* Music button */
 

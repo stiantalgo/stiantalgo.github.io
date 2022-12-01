@@ -18,7 +18,7 @@ window.addEventListener("load", function () {
 
     //hide display and clear it.
     displayBig.addEventListener("click", () => {
-            closeDisplay();            
+        closeDisplay();
     });
 
 
@@ -45,11 +45,11 @@ window.addEventListener("load", function () {
 
     const date = new Date;
     let day = date.getDate();
-    let month = date.getMonth() +1;
+    let month = date.getMonth() + 1;
 
-    if(day > 24 || month != 12){
+    if (day > 24 || month != 12) {
         day = 24;
-    }else{
+    } else {
         day = date.getDate();
     }
 
@@ -64,8 +64,8 @@ window.addEventListener("load", function () {
         for (let i = 1; i <= days; i++) {
             document.getElementById(`back${i}`).addEventListener("click", () => {
                 displayBig.style.display = "block";
-                container.style.filter = "blur(20px)"; 
-                             
+                container.style.filter = "blur(20px)";
+
                 if (i == 24 || i == 8 || i == 14) {
                     displayBig.style.background = "";
                     embedVideo(i);
@@ -75,13 +75,29 @@ window.addEventListener("load", function () {
                 else if (i == 11) {
                     displayBig.style.background = `url(./dailyart/art${i}.gif`;
                     displayBig.style.backgroundRepeat = "no-repeat";
-                    displayBig.style.backgroundPosition = "center";                    
+                    displayBig.style.backgroundPosition = "center";
                 }
 
-                else if(i == 18){
+                else if (i == 18) {
                     displayBig.style.background = `url(./dailyart/art${i}.png`;
                     embedGame("https://draggmaste.itch.io/christmas-runner");
                     displayBig.style.backgroundColor = "black";
+                }
+
+                else if (i == i) {
+                    displayBig.addEventListener('mouseenter', (e) => {
+                        displayBig.style.background = `url(./dailyart/art${i}_b.png`;
+                        displayBig.style.backgroundSize = "contain";
+                        displayBig.style.backgroundRepeat = "no-repeat";
+                        displayBig.style.backgroundPosition = "center";
+                    })
+
+                    displayBig.addEventListener('mouseleave', (e) => {
+                        displayBig.style.background = `url(./dailyart/art${i}.png`;
+                        displayBig.style.backgroundSize = "contain";
+                        displayBig.style.backgroundRepeat = "no-repeat";
+                        displayBig.style.backgroundPosition = "center";
+                    })
                 }
 
                 else {
@@ -89,9 +105,11 @@ window.addEventListener("load", function () {
                     displayBig.style.backgroundSize = "contain";
                     displayBig.style.backgroundRepeat = "no-repeat";
                     displayBig.style.backgroundPosition = "center";
+
+
                 }
 
-                isOpen = true;            
+                isOpen = true;
             })
         }
     }
@@ -101,7 +119,7 @@ window.addEventListener("load", function () {
     //     var target = e.target;
 
     //     if (document.querySelector('target').closest("#bigDisplay").length == 0){
-            
+
     //         closeDisplay();
     //     }
     // });
@@ -126,8 +144,8 @@ window.addEventListener("load", function () {
             case 24: link = "https://www.youtube.com/embed/PwM_zBK2cgk"; break;
             case 14: link = "https://www.youtube.com/embed/NpcuUYDu-_w"; break;
             case 8: link = "https://www.youtube.com/embed/brbHYliXVws"; break;
-            
-        
+
+
             default:
                 break;
         }
@@ -149,14 +167,14 @@ window.addEventListener("load", function () {
         background: `radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)`;
     }
 
-    function embedGame(gameLink){
+    function embedGame(gameLink) {
         let game = gameLink;
         if (bgMusic.play) {
             bgMusic.pause();
             muteMusic.checked = true;
         }
 
-        displayBig.innerHTML =   `<iframe 
+        displayBig.innerHTML = `<iframe 
             width="80%"
             height="20%" 
             frameborder="0" 
@@ -167,8 +185,8 @@ window.addEventListener("load", function () {
             </iframe>`;
     }
 
-    
-    function closeDisplay(){
+
+    function closeDisplay() {
         displayBig.innerHTML = "";
         displayBig.style.background = "";
         displayBig.style.display = "none";
