@@ -84,21 +84,21 @@ window.addEventListener("load", function () {
                     displayBig.style.backgroundColor = "black";
                 }
 
-                else if (i == i) {
-                    displayBig.addEventListener('mouseenter', (e) => {
-                        displayBig.style.background = `url(./dailyart/art${i}_b.png`;
-                        displayBig.style.backgroundSize = "contain";
-                        displayBig.style.backgroundRepeat = "no-repeat";
-                        displayBig.style.backgroundPosition = "center";
-                    })
+                // else if (i == i) {
+                //     displayBig.addEventListener('mouseenter', (e) => {
+                //         displayBig.style.background = `url(./dailyart/art${i}_b.png`;
+                //         displayBig.style.backgroundSize = "contain";
+                //         displayBig.style.backgroundRepeat = "no-repeat";
+                //         displayBig.style.backgroundPosition = "center";
+                //     })
 
-                    displayBig.addEventListener('mouseleave', (e) => {
-                        displayBig.style.background = `url(./dailyart/art${i}.png`;
-                        displayBig.style.backgroundSize = "contain";
-                        displayBig.style.backgroundRepeat = "no-repeat";
-                        displayBig.style.backgroundPosition = "center";
-                    })
-                }
+                //     displayBig.addEventListener('mouseleave', (e) => {
+                //         displayBig.style.background = `url(./dailyart/art${i}.png`;
+                //         displayBig.style.backgroundSize = "contain";
+                //         displayBig.style.backgroundRepeat = "no-repeat";
+                //         displayBig.style.backgroundPosition = "center";
+                //     })
+                // }
 
                 else {
                     displayBig.style.background = `url(./dailyart/art${i}.png`;
