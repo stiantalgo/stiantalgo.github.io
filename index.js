@@ -21,14 +21,6 @@ window.addEventListener("load", function () {
         closeDisplay();
     });
 
-
-    // body.addEventListener("click", () => {
-    //     if(isOpen){
-    //         closeDisplay();
-    //     }
-    // });
-
-
     creditsBtn.addEventListener("click", openCredits);
 
     muteLabel.addEventListener("click", muteMusicFunction);
@@ -41,7 +33,6 @@ window.addEventListener("load", function () {
             addSnowDivs(150);
         }
     });
-
 
     const date = new Date;
     let day = date.getDate();
@@ -71,59 +62,26 @@ window.addEventListener("load", function () {
                     embedVideo(i);
                     displayBig.style.backgroundColor = "black";
                 }
-
                 else if (i == 11) {
                     displayBig.style.background = `url(./dailyart/art${i}.gif`;
                     displayBig.style.backgroundRepeat = "no-repeat";
                     displayBig.style.backgroundPosition = "center";
                 }
-
                 else if (i == 18) {
                     displayBig.style.background = `url(./dailyart/art${i}.png`;
                     embedGame("https://draggmaste.itch.io/christmas-runner");
                     displayBig.style.backgroundColor = "black";
                 }
-
-                // else if (i == i) {
-                //     displayBig.addEventListener('mouseenter', (e) => {
-                //         displayBig.style.background = `url(./dailyart/art${i}_b.png`;
-                //         displayBig.style.backgroundSize = "contain";
-                //         displayBig.style.backgroundRepeat = "no-repeat";
-                //         displayBig.style.backgroundPosition = "center";
-                //     })
-
-                //     displayBig.addEventListener('mouseleave', (e) => {
-                //         displayBig.style.background = `url(./dailyart/art${i}.png`;
-                //         displayBig.style.backgroundSize = "contain";
-                //         displayBig.style.backgroundRepeat = "no-repeat";
-                //         displayBig.style.backgroundPosition = "center";
-                //     })
-                // }
-
                 else {
                     displayBig.style.background = `url(./dailyart/art${i}.png`;
                     displayBig.style.backgroundSize = "contain";
                     displayBig.style.backgroundRepeat = "no-repeat";
                     displayBig.style.backgroundPosition = "center";
-
-
                 }
-
                 isOpen = true;
             })
         }
     }
-
-    // close window if clicked outside area
-    // this.document.querySelector("html").click(function (e) {
-    //     var target = e.target;
-
-    //     if (document.querySelector('target').closest("#bigDisplay").length == 0){
-
-    //         closeDisplay();
-    //     }
-    // });
-
 
     function addMiniArt(days) {
         for (let i = 1; i <= days; i++) {
@@ -217,7 +175,6 @@ window.addEventListener("load", function () {
         } else {
             creditsDiv.hidden = true;
         }
-
     }
 
     function muteMusicFunction() {
@@ -252,11 +209,7 @@ window.addEventListener("load", function () {
         while (snowDivs.firstChild) {
             snowDivs.removeChild(snowDivs.firstChild);
         }
-
-
     }
-
-
 
     function addSnowDivs(num) {
         for (let i = 0; i < num; i++) {
@@ -266,51 +219,46 @@ window.addEventListener("load", function () {
         }
     }
 
-
-    // function removeSnow() {
-    //     const elements = document.getElementsByClassName("snow");
-    //     while (elements.length > 0) {
-    //         elements[0].parentNode.removeChild(elements[0]);
-    //     }
-    // }
-
-
     // function addHatches(){
     //     for(let i = 1; i <= day; i++){
 
     //         const dayHatch = document.createElement("div");
     //         dayHatch.className = `day-${i}`;
+    //         dayHatch.id = `day${i}`;
     //         document.getElementById("allHatches").appendChild(dayHatch);
 
-    //         const lab = document.createElement("label");
-    //         lab.className = "myLab";
-    //         dayHatch.appendChild(lab);
+    //             const lab = document.createElement("label");
+    //             lab.className = "myLab";
+    //             dayHatch.appendChild(lab);
 
-    //         const myInput = document.createElement("input");
-    //         lab.appendChild(myInput);
+    //                 const myInput = document.createElement("input");
+    //                 myInput.type = "checkbox";
+    //                 lab.appendChild(myInput);
 
-    //         const myDoor = document.createElement("div");
-    //         myDoor.className = "door";
-    //         lab.appendChild(myDoor);
+    //                 const myDoor = document.createElement("div");
+    //                 myDoor.className = "door";
+    //                 lab.appendChild(myDoor);
 
-    //         const myDoorFront = document.createElement("div");
-    //         myDoorFront.className = "front";
-    //         myDoorFront.className = `front${i}`;
+    //                     const myDoorFront = document.createElement("div");
+    //                     myDoorFront.className = "front";
+    //                     myDoorFront.id = `front${i}`;
 
-    //         myDoor.appendChild(myDoorFront);
+    //                     myDoor.appendChild(myDoorFront);
 
-    //         const myDoorBack = document.createElement("div");
-    //         myDoorBack.className = "back";
-    //         myDoorBack.className = `back${i}`;
-    //         myDoor.appendChild(myDoorBack);    
+    //                     const myDoorBack = document.createElement("div");
+    //                     myDoorBack.className = "back";
+    //                     myDoorBack.id = `back${i}`;
+    //                     myDoor.appendChild(myDoorBack);    
     //     }
     // }
 
+        // close window if clicked outside area
+    // this.document.querySelector("html").click(function (e) {
+    //     var target = e.target;
 
+    //     if (document.querySelector('target').closest("#bigDisplay").length == 0){
 
-
-
-
-
-
+    //         closeDisplay();
+    //     }
+    // });
 })
