@@ -57,12 +57,12 @@ window.addEventListener("load", function () {
                 displayBig.style.display = "block";
                 container.style.filter = "blur(20px)";
 
-                if (i == 24 || i == 8 || i == 14) {
+                if (i == 8 || i == 14) {
                     displayBig.style.background = "";
                     embedVideo(i);
                     displayBig.style.backgroundColor = "black";
                 }
-                else if (i == 11) {
+                else if (i == 11 || i == 24) {
                     displayBig.style.background = `url(./dailyart/art${i}.gif`;
                     displayBig.style.backgroundRepeat = "no-repeat";
                     displayBig.style.backgroundPosition = "center";

@@ -78,7 +78,8 @@ button:hover{
   border-radius: 25px;
   font-size: 40px;
   color: green;
-  background: url(./icons/open.png);
+  background-color: #090a0f00;
+  background-image: url(./img/open.png);
   background-repeat: no-repeat;
   background-size: contain;   
   background-position: center;
